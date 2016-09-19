@@ -4,7 +4,9 @@
     <li>
       <h2>{{mail.from}}</h2>
       <h2>{{mail.to}}</h2>
-      <h2>{{mail.subject}}</h2>
+      {{#link-to 'folder.mail' mail}}
+        <h2>{{mail.subject}}</h2>
+        {{/link-to}}
       <h2>{{mail.body}}</h2>
       <h2>{{mail.sentAt}}</h2>
     </li>
