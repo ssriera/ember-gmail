@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model({ mailId }) {
-    return this.modelFor('application')[mailId-1];
+  model({ mailID }) {
+    return this.modelFor('application')[mailID-1];
   },
   serialize(model) {
-    return {mailId: model.id};
+    return {mailID: model.id};
   }
 });

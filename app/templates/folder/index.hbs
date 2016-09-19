@@ -1,14 +1,11 @@
-<h2>Folder Index</h2>
-<ul>
-  {{#each model as |mail|}}
-    <li>
-      <h2>{{mail.from}}</h2>
-      <h2>{{mail.to}}</h2>
-      {{#link-to 'folder.mail' mail}}
-        <h2>{{mail.subject}}</h2>
-        {{/link-to}}
-      <h2>{{mail.body}}</h2>
-      <h2>{{mail.sentAt}}</h2>
-    </li>
-  {{/each}}
-</ul>
+<table class="table table-inbox table-hover">
+  <tbody>
+    {{#each model as |email|}}
+      <tr class="unread" {{action "showEmail" email}}>
+        <td class="view-message dont-show">{{email.from}}</td>
+        <td class="view-message">{{email.subject}}</td>
+        <td class="view-message text-right">{{email.sentAt}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
