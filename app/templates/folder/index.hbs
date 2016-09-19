@@ -1,0 +1,12 @@
+<h2>Folder Index</h2>
+<ul>
+  {{#each model as |mail|}}
+    <li>
+      <h2>{{mail.from}}</h2>
+      <h2>{{mail.to}}</h2>
+      <h2>{{mail.subject}}</h2>
+      <h2>{{mail.body}}</h2>
+      <h2>{{mail.sentAt}}</h2>
+    </li>
+  {{/each}}
+</ul>
