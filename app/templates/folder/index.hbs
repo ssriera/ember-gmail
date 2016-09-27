@@ -1,4 +1,4 @@
-{{#if (and (get model.length 0) (eq currentFolderName 'inbox'))}}
+{{#if (and (gt model.length 0) (eq currentFolderName 'inbox'))}}
   <div class="mail-option">
     {{#rl-dropdown-container class="btn-group"}}
       {{#rl-dropdown-toggle class="btn btn-default"}}
