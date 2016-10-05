@@ -6,6 +6,7 @@ import folderPage from 'ember-gmail/tests/pages/folder';
 moduleForAcceptance('Acceptance | favorites');
 
 test('User favorites email from inbox', function(assert) {
+  server.create('email', { tags: [] });
   folderPage.visit();
   folderPage.emails(0).star();
 
